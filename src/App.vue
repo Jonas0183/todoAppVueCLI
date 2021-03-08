@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <app-head/>
+    <list-body/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import appHead from './components/appHead.vue'
+import ListBody from './components/listBody.vue'
 
 export default {
+  components: { appHead, ListBody},
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
-
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 800px;
+  background-color: #f0f4ff;
+  max-width:800px;
+  margin-top: 1vh;
+  margin: auto;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Signika', sans-serif;
 }
 </style>
