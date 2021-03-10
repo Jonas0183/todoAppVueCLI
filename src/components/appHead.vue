@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{ header }}</h1>
+    <!-- <span> Tareas realizadas : {{this.doneTasks}} </span> -->
   </div>
 </template>
 
@@ -10,6 +11,12 @@ export default {
   data: () => ({
     header: "To-Do list App",
   }),
+  // inject: ["$doneTasks"],
+  // computed: {
+  //   doneTasks() {
+  //     return this.$doneTasks();
+  //   },
+  // },
 };
 </script>
 
