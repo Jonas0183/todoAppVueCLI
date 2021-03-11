@@ -6,6 +6,12 @@
     <span>Tareas realizadas: {{ this.totalTasks - this.todoLength }} </span
     ><br />
     <span>Tareas por realizar: {{ this.todoLength }} </span><br />
+    <portal to="destination">
+      <p>
+        Porcentaje de tareas realizadas hoy :
+        {{ ((this.totalTasks - this.todoLength) / this.totalTasks) * 100 }}%
+      </p>
+    </portal>
   </div>
 </template>
 <script>

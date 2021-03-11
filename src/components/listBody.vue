@@ -12,6 +12,7 @@
         ></todo-item>
       </li>
     </ul>
+    <portal-target name="destination"></portal-target>
     <todo-footer />
   </div>
 </template>
