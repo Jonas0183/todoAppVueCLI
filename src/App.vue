@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <app-head />
+    <app-head>
+      <h1>To-do List App</h1>
+    </app-head>
     <list-body />
   </div>
 </template>

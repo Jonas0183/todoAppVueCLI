@@ -3,8 +3,8 @@
     <footer-stadistics />
     <span class="footerText"
       >To do List App <br />
-      with Vue <br />Developed by Jonás</span
-    >
+      with Vue<br />Developed by Jonás
+    </span>
   </div>
 </template>
 <script>

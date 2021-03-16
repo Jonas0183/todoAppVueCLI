@@ -18,6 +18,7 @@
 </template>
 <script>
 import uniqueId from "lodash.uniqueid";
+import bus from "../bus";
 import CleanDone from "./cleanDone";
 import TodoInput from "./todoInput";
 import TodoItem from "./todoItem";
@@ -46,6 +47,14 @@ export default {
     },
   },
   methods: {
+    howManyClean() {
+      let n = 0;
+      this.todoItems.forEach((item) => {
+        if (item.done === true) n += 1;
+        bus.$emit("to-clean", n);
+        bus.$emit("total", this.tasks);
+      });
+    },
     cleanDone() {
       this.todoItems = this.todoItems.filter((item) => item.done === false);
     },
@@ -82,3 +91,4 @@ export default {
   margin-bottom: 2vh;
 }
 </style>
+        

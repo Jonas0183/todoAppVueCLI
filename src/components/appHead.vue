@@ -1,22 +1,15 @@
 <template>
   <div>
-    <h1>{{ header }}</h1>
-    <!-- <span> Tareas realizadas : {{this.doneTasks}} </span> -->
+    <slot>
+      <h1>Header</h1>
+    </slot>
   </div>
 </template>
 
 <script>
 export default {
   name: "appHead",
-  data: () => ({
-    header: "To-Do list App",
-  }),
-  // inject: ["$doneTasks"],
-  // computed: {
-  //   doneTasks() {
-  //     return this.$doneTasks();
-  //   },
-  // },
+  data: () => ({}),
 };
 </script>
 
